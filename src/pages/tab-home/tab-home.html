@@ -42,15 +42,18 @@
   </ion-slide> 
 </ion-slides>
 
+<!-- แสดงรูปที่ถ่ายหรือเลือกจาก Gallery -->
+<img src="{{base64Image}}" alt="">
+
 <ion-grid>
   <ion-row>
     <ion-col>
-      <p><ion-icon name="arrow-forward"></ion-icon></p>
-      MENU1
+      <p><ion-icon name="camera" (click)="takecamera()"></ion-icon></p>
+      Camera
     </ion-col>
-    <ion-col>
-      <p><ion-icon name="arrow-forward"></ion-icon></p>
-      MENU2
+    <ion-col (click)="choose()">
+      <p><ion-icon name="images"></ion-icon></p>
+      Gallery
     </ion-col>
     <ion-col>
       <p><ion-icon name="arrow-down"></ion-icon></p>

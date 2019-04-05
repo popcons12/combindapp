@@ -9,8 +9,45 @@
     <button ion-button menuToggle="left" ><ion-icon name="menu"></ion-icon></button>
     <ion-title>บริการ</ion-title>
   </ion-navbar>
+
+<ion-toolbar >
+  <ion-segment [(ngModel)]="services" color="light">
+      <ion-segment-button value="General" >
+        General
+      </ion-segment-button>
+      <ion-segment-button value="Education">
+        Education
+      </ion-segment-button>
+      <ion-segment-button value="Special">
+        Special
+        </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+
 </ion-header>
 
 <ion-content padding>
 
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+
+<div [ngSwitch]="services">
+  <ion-list *ngSwitchCase="'General'" >
+    <ion-item  >
+     Tab1
+    </ion-item>
+  </ion-list>
+ <ion-list *ngSwitchCase="'Education'" >
+  <ion-item  >
+   Tab2
+  </ion-item>
+</ion-list>
+<ion-list *ngSwitchCase="'Special'" >
+    <ion-item  >
+     Tab3
+    </ion-item>
+</ion-list>
+
+</div>
 </ion-content>

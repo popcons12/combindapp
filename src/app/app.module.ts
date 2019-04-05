@@ -19,6 +19,10 @@ import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { WebapiServiceProvider } from '../providers/webapi-service/webapi-service';
 import { HttpModule} from '@angular/http';
+import { GlobalvarProvider } from '../providers/globalvar/globalvar';
+import { CoursedetailPage } from '../pages/coursedetail/coursedetail';
+
+import { Camera } from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,8 @@ import { HttpModule} from '@angular/http';
     TabsPage,
     TabArticlePage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    CoursedetailPage
   ],
   imports: [
     BrowserModule,
@@ -55,13 +60,16 @@ import { HttpModule} from '@angular/http';
     TabsPage,
     TabArticlePage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    CoursedetailPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    WebapiServiceProvider
+    WebapiServiceProvider,
+    GlobalvarProvider,
+    Camera
   ]
 })
 export class AppModule {
