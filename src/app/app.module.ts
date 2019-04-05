@@ -23,6 +23,7 @@ import { GlobalvarProvider } from '../providers/globalvar/globalvar';
 import { CoursedetailPage } from '../pages/coursedetail/coursedetail';
 
 import { Camera } from '@ionic-native/camera';
+import { MapsPage } from '../pages/maps/maps';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { Camera } from '@ionic-native/camera';
     TabArticlePage,
     LoginPage,
     RegisterPage,
-    CoursedetailPage
+    CoursedetailPage,
+    MapsPage
   ],
   imports: [
     BrowserModule,
@@ -61,7 +63,8 @@ import { Camera } from '@ionic-native/camera';
     TabArticlePage,
     LoginPage,
     RegisterPage,
-    CoursedetailPage
+    CoursedetailPage,
+    MapsPage
   ],
   providers: [
     StatusBar,

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams  } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { RegisterPage } from '../register/register';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import { MapsPage } from '../maps/maps';
 
 
 /**
@@ -90,6 +91,11 @@ export class TabHomePage {
     });
 
 
+  }
+
+
+  showmap(){
+    this.navCtrl.push(MapsPage);
   }
 
 
